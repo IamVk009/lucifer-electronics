@@ -7,24 +7,24 @@ import java.util.List;
 
 public interface UserService {
 
-//    Create user
+//  Create user
     UserDto createUser(UserDto userDto);
 
-//    Get User by ID
-    UserDto getUserById(String id);
+//  Get User by ID
+    UserDto getUserById(String userId);
 
-//    Get All Users
+//  Get All Users
     List<UserDto> getAllUsers();
 
-//    Get User by Email
+//  Get User by Email
     UserDto getUserByEmail(String email);
 
-//    Update User
-    UserDto updateUser(UserDto userDto);
+//  Update User using ID
+    UserDto updateUser(UserDto userDto, String userId);
 
 //    Delete User by Id
-    void deleteUser(String id);
+    void deleteUser(String userId);
 
-//    Search User
+//   Search User using keyword in userName
     List<UserDto> searchUser(String keyword);
 }
